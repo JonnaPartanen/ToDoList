@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html lang="fi">
+<style>
+
+body{
+
+	width:90%;
+	height:800px;
+	background:#BB9BDB;
+}
+
+h1{
+	color: red;
+	font-family: 'Indie Flower', cursive;
+	font-size: 40px;
+	margin-left: 120px;
+}
+
+#ylaosa{
+
+	width:60%;
+	height:80px;
+}
+
+#roskisdivi{
+	width:25%;
+	height: 300px;
+	margin-right: 70px;
+	float:right;
+}
+
+#pvmNappula{
+	
+	position:relative;
+	float:left;
+
+}
+
+#pvmKentta{
+	font-size: 20px;
+}
+
+#tekstialue {
+    width: 50%;
+    height: 100px;
+    border: 1px solid black;
+	background:black;
+	margin-left: 100px;
+	border-radius:15px;
+	
+}
+
+#tekstikentta {
+	width: 85%;
+	height: 20px;
+	margin-left: 50px;
+	margin-top: 40px;
+	
+}
+
+#addNappula{
+	position:relative;
+	margin-right: 38px;
+	background: red;
+	color:#eee;
+	float:right;
+}
+
+#listaAlue{
+	width: 50%;
+	height: auto;
+	border: 1px solid black;
+	background:black;
+	margin-left: 100px;
+	border-radius:15px;
+}
+
+li{
+	
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 18px;
+	overflow: hidden;
+	border: 1px solid black;
+	border-radius: 20px;
+	margin-bottom: 4px;
+	font-family: 'Gloria Hallelujah', cursive;
+	
+}
+
+ul {
+
+	width: 93%;
+ 	list-style-type: none;
+ 	margin-left:20px;
+	margin-right:20px;
+  	padding: 0;
+  	
+}
+
+
+.poista{
+	
+	
+	position: relative;
+	background:#eeeeee; 
+  	border-style: none;
+	display:none;
+	margin-right:5px;
+	margin-top: 1px;
+	margin-bottom:1px;
+	float:right;
+}
+
+.tehty{
+	
+	position:relative;
+	background:#eeeeee; 
+  	border-style: none;
+	display:none;
+	margin-right: 5px;
+	margin-top: 1px;
+	margin-bottom:1px;
+	float:right;
+}
+
+.tärkeää{
+	
+	position: relative;
+	background:#eeeeee; 
+  	border-style: none;
+	display:none;
+	margin-right: 5px;
+	margin-top: 1px;
+	margin-bottom:1px;
+	float:right;
+}
+
+</style>
+		
+<head>
+	<meta charset="ISO-8859-1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>ToDo List</title>
+</head>
+<body>
+	<div id= "ylaosa">
+	<h1>ToDo List</h1>
+	
+	
+		<button type="submit" id="pvmNappula" onclick="annaPvm()">PVM</button>
+		<br>
+	    <p id="pvmKentta"><br></p>
+		
+	</div>		
+
+<br>
+<div id="tekstialue">
+	<input type="text" name="tekstikentta1" id="tekstikentta" onkeydown="enterPainallus(event)" placeholder="Add something..">
+	<button type="submit" id ="addNappula" onclick="luoListaElementti()">Add</button>
+</div>
+<div id="roskisdivi"><h1>Roskis</h1><img src="trashcan.png" ondrop="drop(event)" ondragover="allowDrop(event)" id="trash" draggable="false"></div>
+<br>
+
+<div id="listaAlue">
+<ul id="Lista">
+
+</ul>
+
+</div>
+
+</body>
+<script type='text/javascript' src="todolist.js"></script>
+</html>
